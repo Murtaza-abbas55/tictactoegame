@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: darkslategrey;
+    color:white;
+    height:65px;
+    display:flex;
+    /* justify-content: center; */
+    padding: 0px 12px;
+    align-items: center;
+    font-size: 27px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}  
+nav ul{
+    list-style-type:none;
+}
+
+.gcontainer{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    position:relative;
+}
+
+.container{
+   display:grid;
+   grid-template-columns: repeat(3,10vw);
+   grid-template-rows: repeat(3,10vw);
+   font-family: "Roboto", sans-serif;
+   position: relative;
+}
+.winline{
+    background-color: rgb(148, 65, 232);
+    width: 0;
+    height:3px;
+    position: absolute;
+    transition:width 1s ease-in-out;
+}
+.gamegrid{
+    border:2px solid black;
+    font-size: 8vw;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamegrid:hover{
+    background-color: rgb(217, 186, 246);
+}
+.info{
+    font-size: 23px;
+}
+
+.ginfo{
+    padding: 0 34px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.ginfo h1{
+    font-size: 1.5rem;
+}
+.br0{
+    border-right: 0;
+}
+.bl0{
+    border-left: 0;
+}
+.bt0{
+    border-top: 0;
+}
+.bb0{
+    border-bottom: 0;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.img img{
+    width:0;
+    transition: width 1s ease-in-out;
+}
+.infotext{
+    padding: 12px;
+    display:flex;
+    justify-content:center;
+}
+.reset{
+    margin:0 23px;
+    padding:1px 18px;
+    background-color: peru;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+
+}
+@media  screen and (max-width:800px) {
+    .gcontainer{
+        flex-wrap: wrap;
+    }
+    .ginfo{
+        margin-top: 34px;
+    }
+    .container{
+        
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+        
+     }
+}
